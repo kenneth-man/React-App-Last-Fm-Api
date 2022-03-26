@@ -1,13 +1,137 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    transition: all 0.15s !important;
+    text-align: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html,
+body,
+#root,
+.App {
+    height: 100%;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+/*equivalent to 'space-y-...' in tailwind */
+.space-y-80 > *:not(:last-child) {
+    margin-bottom: 20rem;
+}
+
+.space-y-40 > *:not(:last-child) {
+    margin-bottom: 10rem;
+}
+
+.space-y-20 > *:not(:last-child) {
+    margin-bottom: 5rem;
+}
+
+.space-y-10 > *:not(:last-child) {
+    margin-bottom: 2.5rem;
+}
+
+.space-y-8 > *:not(:last-child) {
+    margin-bottom: 2rem;
+}
+
+.space-y-6 > *:not(:last-child) {
+    margin-bottom: 1.5rem;
+}
+
+.space-y-4 > *:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+.space-y-2 > *:not(:last-child) {
+    margin-bottom: 0.5rem;
+}
+
+/*'space-x-...' */
+.space-x-80 > *:not(:last-child) {
+    margin-left: 20rem;
+}
+
+.space-x-40 > *:not(:last-child) {
+    margin-left: 10rem;
+}
+
+.space-x-20 > *:not(:last-child) {
+    margin-left: 5rem;
+}
+
+.space-x-10 > *:not(:first-child) {
+    margin-left: 2.5rem;
+} 
+
+.space-x-8 > *:not(:first-child) {
+    margin-left: 2rem;
+} 
+
+.space-x-6 > *:not(:first-child) {
+    margin-left: 1.5rem;
+} 
+
+.space-x-4 > *:not(:first-child) {
+    margin-left: 1rem;
+} 
+
+.space-x-2 > *:not(:first-child) {
+    margin-left: 0.5rem;
+} 
+
+/*these properties don't exist in mui or it's just easier to do with a class*/
+.Link,
+.NavLink {
+    text-decoration-color: transparent;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 2px;
+}
+
+.Link:hover {
+    text-decoration-color: currentColor;
+}
+
+.NavLink {
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.NavLink:hover,
+.NavLink--active {
+    color: rgba(255,0,0,0.8);
+    text-decoration-color: rgba(255,0,0,0.8);
+}
+
+.p {
+    display: -webkit-box;
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+div::-webkit-scrollbar {
+    width: 10px;
+}
+  
+div::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 50px;
+    margin: 10px 0px;
+}
+  
+div::-webkit-scrollbar-thumb {
+    background: rgba(180, 0, 0, 0.8);
+    border-radius: 50px;
+}
+  
+div::-webkit-scrollbar-thumb:hover {
+    background: rgba(98, 0, 0, 0.8);
 }
